@@ -10,10 +10,11 @@ import java.util.Date;
 public class FirstClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
-        for (int i = 0; i < 1000; i++) {
-            ByteBuf buffer = getByteBuf(ctx);
-            ctx.channel().writeAndFlush(buffer);
-        }
+//        for (int i = 0; i < 1000; i++) {
+//            ByteBuf buffer = getByteBuf(ctx);
+//            buffer.writeBytes("\t".getBytes());
+//            ctx.channel().writeAndFlush(buffer);
+//        }
     }
 
     private ByteBuf getByteBuf(ChannelHandlerContext ctx) {

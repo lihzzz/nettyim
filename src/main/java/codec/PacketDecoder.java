@@ -8,8 +8,9 @@ import protocol.command.PacketCodeC;
 import java.util.List;
 
 public class PacketDecoder extends ByteToMessageDecoder {
+
     @Override
-    protected void decode(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf, List<Object> list) throws Exception {
-        list.add(PacketCodeC.INSTANCE.decode(byteBuf));
+    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List out) {
+        out.add(PacketCodeC.INSTANCE.decode(in));
     }
 }

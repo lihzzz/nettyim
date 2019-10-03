@@ -8,8 +8,10 @@ import static protocol.command.Command.MESSAGE_REQUEST;
 @Data
 public class MessageRequestPacket extends BasePacket {
     private String message;
+    private String toUserId;
 
-    public MessageRequestPacket(String message) {
+    public MessageRequestPacket(String toUserId,String message) {
+        this.toUserId = toUserId;
         this.message = message;
     }
     @Override
